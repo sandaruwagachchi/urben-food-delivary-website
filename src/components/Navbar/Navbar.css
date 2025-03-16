@@ -3,8 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
 }
 
 .navbar .logo {
@@ -17,14 +15,22 @@
     gap: 35px;
     color: #333;
     font-size: 18px;
-    font-weight: 500;
+    font-weight:bold;
     cursor: pointer;
-}
 
-.navbar-menu li:hover {
-    color: #27ae60;
 }
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
 
+  .navbar-menu a:hover,
+  .navbar-menu Link:hover {
+      color: #27ae60;
+      display: inline-block;
+      animation: zoomInOut 1.5s infinite ease-in-out;
+  }
 .navbar-right {
     display: flex;
     align-items: center;
@@ -60,13 +66,60 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #219150;
+    transform: scale(1.1);
 }
 .navbar .active{
     padding-bottom: 2px;
     border-bottom: 2px solid #0d582c ;
 }
+@media (max-width:1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-right{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+
+    }
+}
+@media (max-width:900px) {
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-right{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+
+    }
+}
+@media (max-width:750px) {
+    .navbar-menu{
+        display: none;
+    }
+    
+}
+
