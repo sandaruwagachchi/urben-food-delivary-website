@@ -1,0 +1,72 @@
+.navbar {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navbar-menu li:hover {
+    color: #27ae60;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.search-icon img,
+.cart-icon img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon .dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    right: -2px;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #219150;
+}
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #0d582c ;
+}
