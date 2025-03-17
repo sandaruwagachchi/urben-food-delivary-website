@@ -5,6 +5,13 @@ import menu_4 from '../../src/assets/baked goods.png'
 import menu_5 from '../../src/assets/handmade.png'
 import menu_6 from '../../src/assets/indoor plants.png'
 
+import food_1 from '../../src/assets/papol.png'
+import food_2 from '../../src/assets/Brinjal.png'
+import food_3 from '../../src/assets/cake.png'
+import food_4 from '../../src/assets/bigonia.png'
+import food_5 from '../../src/assets/bag.png'
+import food_6 from '../../src/assets/malupan.png'
+
 export const menu_list=[
     {
         menu_name:"Vegetables",
@@ -27,8 +34,60 @@ export const menu_list=[
         menu_image:menu_5
     },
     {
-        menu_name:"Indoor Palnts",
+        menu_name:"Indoor Plants",
         menu_image:menu_6
     },
    
+]
+
+export const food_list=[
+    {
+       _id:"1" ,
+       name:"Papol",
+       image:food_1,
+       price:12,
+       description:"Papolllllllllllll",
+       category:"Fruits"
+    },
+    {
+        _id:"2" ,
+        name:"Brinjal",
+        image:food_2,
+        price:18,
+        description:"Brinjalllllllllllll",
+        category:"Vegetables"
+     },
+     {
+        _id:"3" ,
+        name:"Cake",
+        image:food_3,
+        price:20,
+        description:"Buter cake",
+        category:"Baked Goods"
+     },
+     {
+        _id:"4" ,
+        name:"Bigoniya",
+        image:food_4,
+        price:12,
+        description:"Banananananananana",
+        category:"Indoor Plants"
+     },
+     {
+        _id:"5" ,
+        name:"bag",
+        image:food_5,
+        price:10,
+        description:"redi Bag",
+        category:"Handmade Craft"
+     },
+     {
+        _id:"6" ,
+        name:"Malupan",
+        image:food_6,
+        price:12,
+        description:"Banananananananana",
+        category:"Baked Goods"
+     }
+     
 ]
