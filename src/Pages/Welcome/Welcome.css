@@ -1,4 +1,4 @@
-.welcome-container {
+.welcome-containers {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.welcome-container::before {
+.welcome-containers::before {
   content: "";
   position: absolute;
   top: 0;
@@ -19,16 +19,16 @@
   background-image: url('/header.png');
   background-size: cover;
   background-position: center center;
-  filter: blur(10px); /* Apply blur effect */
-  z-index: -1; /* Ensures the image stays behind the content */
+  filter: blur(5px); 
+  z-index: -1; 
 }
-  .welcome-container h1 {
+  .welcome-containers h1 {
     font-size: 100px;
-    color: #4CAF50; 
+    color: #27ae60; 
     margin-bottom: 20px;
   }
  
-  .welcome-container p {
+  .welcome-containers .desc {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 40px;
@@ -37,13 +37,13 @@
     line-height: 1.5;
   }
 
-  .button-group {
+  .btn-groups {
     display: flex;
     gap: 20px;
   }
 
-  .button-group button {
-    background-color: #4CAF50;
+  .btn-groups button {
+    background-color: #27ae60;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -54,25 +54,25 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .button-group button:hover {
-    background-color: #45a049;
+  .btn-groups button:hover {
+    background-color: #219150;;
   }
   @media (max-width: 600px) {
-    .welcome-container h1 {
+    .welcome-containers h1 {
       font-size: 2.5rem;
     }
     
-    .welcome-container p {
+    .welcome-containers p {
       font-size: 1rem;
       width: 80%;
     }
     
-    .button-group {
+    .btn-groups {
       flex-direction: column;
       gap: 15px;
     }
   
-    .button-group button {
+    .btn-groups button {
       width: 100%;
       padding: 12px;
     }

@@ -67,11 +67,11 @@
     border-radius: 5px;
   }
   
-  button {
+  .payment-btn {
     width: 100%;
     padding: 15px;
-    font-size: 1.2rem;
-    background-color: #4CAF50;
+    font-size: 16px;
+    background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 5px;
@@ -79,8 +79,8 @@
     transition: background-color 0.3s;
   }
   
-  button:hover {
-    background-color: #45a049;
+  .payment-btn:hover {
+    background-color: #219150;
   }
   
   .error-message {

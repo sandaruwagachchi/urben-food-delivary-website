@@ -14,7 +14,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
     padding: 25px 30px;
     border-radius: 8px;
     font-size: 15px;
@@ -62,35 +62,27 @@
     background-color: #218c50;
 }
 
-.login-popup-condition {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-top: -15px;
+.login-conditions{
+ flex-direction: row;
 }
 
-.login-popup-condition input {
+.login-popup-condition .check {
     margin-top: 5px;
 }
-.login-popup p{
-    font-size: 20px;
+.login-popup-condition .para{
+    font-size: 14px;
 }
 
-.login-popup p span {
+.login-popup .para2 span {
     color: #27ae60;
     font-weight: 500;
     cursor: pointer;
     text-decoration: underline;
 }
 
-.login-popup p {
-    font-size: 12px;
+.login-popup .para2 {
+    font-size: 14px;
     color: #808080;
     margin: 10px 0; 
     text-align: center;
-}
-
-.login-popup-condition p {
-    font-size: 12px;
-    color: #808080;
 }

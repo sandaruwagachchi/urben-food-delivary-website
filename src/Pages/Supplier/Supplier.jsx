@@ -11,7 +11,7 @@ import Orders from '../../Pages/SPanel/Orders/Orders';
 const Supplier = () => {
   return (
     <div>
-      <div className="navbar">
+      <div className="navbars">
         <img src={logo} alt="Logo" className="logo" />
         <h3>Supplier Panel</h3>
         <img src={profile} alt="Profile" className="profile" />

@@ -13,11 +13,11 @@ const Welcome = () => {
   };
 
   return (
-    <div className="welcome-container">
+    <div className="welcome-containers">
       <h1>Urban Foods</h1>
-      <p>Your trusted marketplace for fresh and local products!</p>
+      <p className="desc">Your trusted market place for fresh and local products!</p>
       
-      <div className="button-group">
+      <div className="btn-groups">
         <button onClick={() => handleUserTypeClick("customer")}>Customer</button>
         <button onClick={() => handleUserTypeClick("supplier")}>Supplier</button>
       </div>

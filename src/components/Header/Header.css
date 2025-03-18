@@ -37,3 +37,19 @@
         padding: 2vw 4vw;
     }
 }
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #219150;
+    transform: scale(1.1);
+}

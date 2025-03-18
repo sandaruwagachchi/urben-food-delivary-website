@@ -30,17 +30,17 @@ const Login = ({ setShowLogin }) => {
           <input type="email" placeholder='Enter your email' required />
           <input type="password" placeholder='Enter your password' required />
         </div>
-        <div className="login-popup-condition">
-          <input type="checkbox" required />
-          <p>By continuing, I agree to the terms and conditions</p>
+        <div className="login-conditions">
+          <input className='check' type="checkbox" required />
+          <p className='para'>By continuing, I agree to the terms and conditions</p>
         </div>
         <button type="submit">
           {currState === "Sign Up" ? "Create Account" : "Login"}
         </button>
         {currState === "Login" ? (
-          <p>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click here</span></p>
+          <p className='para2'>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click here</span></p>
         ) : (
-          <p>Already have an account? <span onClick={() => setCurrState("Login")}>Login here</span></p>
+          <p className='para2'>Already have an account? <span onClick={() => setCurrState("Login")}>Login here</span></p>
         )}
       </form>
     </div>

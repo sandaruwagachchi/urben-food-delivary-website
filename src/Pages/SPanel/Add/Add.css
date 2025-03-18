@@ -8,15 +8,13 @@
   
   .flex-col{
     background: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 1000px;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-   margin-left: 110px;
+    margin-left: 20px;
   }
   
   .add-img-upload {
@@ -82,6 +80,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 120px;
   }
   
   .add-btn:hover {

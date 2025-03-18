@@ -23,10 +23,28 @@
     gap: 20px;
 }
 .cart-total-details{
-    display: flex;
+    display:flex;
     justify-content: space-between;
     color: gray;
 }
 .cart-total hr{
     margin: 10px 0px;
+}
+.checkout {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding:  15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+    margin-left: 150px;
+    font-weight: bold;
+}
+
+.checkout:hover {
+    background-color: #219150;
+    transform: scale(1.1);
 }

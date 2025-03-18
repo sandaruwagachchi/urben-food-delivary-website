@@ -110,7 +110,7 @@ const PlaceOrder = () => {
          <b>{0}</b>
       </div>
    </div>
-   <button>PAYMENT</button>
+   <button className='payment-btn'>PAYMENT</button>
    </div>
    </div>
   </form>

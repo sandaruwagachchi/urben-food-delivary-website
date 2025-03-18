@@ -20,7 +20,7 @@
     border: 1px solid #a9a9a9;
     border-right: 1;
     padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 5px 5px 5px 5px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 30px;

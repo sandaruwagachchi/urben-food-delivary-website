@@ -59,21 +59,6 @@
     right: -2px;
 }
 
-button {
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #219150;
-    transform: scale(1.1);
-}
 .navbar .active{
     padding-bottom: 2px;
     border-bottom: 2px solid #0d582c ;

@@ -41,7 +41,7 @@ const Cart = () => {
          <b>{0}</b>
       </div>
    </div>
-   <button onClick={()=>navigate('/order')}>CHECKOUT</button>
+   <button className='checkout' onClick={()=>navigate('/order')}>CHECKOUT</button>
    </div>
    </div>
    </div>
