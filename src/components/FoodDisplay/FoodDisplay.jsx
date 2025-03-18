@@ -25,7 +25,7 @@ const FoodDisplay = ({ category }) => { // Destructuring props
                   />
                 )
               }
-              return null; // Avoid empty return
+              return null;
             })}
         </div>
     </div>

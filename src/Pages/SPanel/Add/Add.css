@@ -1,4 +1,4 @@
-.add {
+.add-page{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     background: #f9f9f9;
   }
   
-  form {
+  .flex-col{
     background: #fff;
     padding: 30px;
     border-radius: 10px;

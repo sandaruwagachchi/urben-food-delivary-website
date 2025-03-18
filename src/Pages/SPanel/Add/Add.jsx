@@ -4,7 +4,7 @@ import upload_area from '../../../assets/upload_area.png'
 
 const Add = () => {
   return (
-    <div className="add">
+    <div className="add-page">
       <form className="flex-col">
         <div className="add-img-upload flex-col">
           <p>Upload Image</p>
