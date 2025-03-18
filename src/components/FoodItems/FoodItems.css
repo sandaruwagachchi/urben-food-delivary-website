@@ -68,3 +68,8 @@
 .food-item-counter img{
     width: 30px;
 }
+.food-item-quantity{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}

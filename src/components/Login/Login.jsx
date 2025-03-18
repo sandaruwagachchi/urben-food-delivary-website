@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import './Login.css';
 import cros_icon from '../../assets/cros_icon.png';
+import { useNavigate } from 'react-router';
 
-const Login = ({ setShowLogin }) => {
+const CLogin = ({ setShowLogin }) => {
+  const navigate = useNavigate();
   const [currState, setCurrState] = useState("Login");
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate('/supplier'); 
+  };
 
   return (
     <div className="login-popup">
-      <form className="login-popup-container">
+      <form className="login-popup-container" onSubmit={handleSubmit}>
         <div className="login-popup-title">
           <h2>{currState}</h2>
           <img onClick={() => setShowLogin(false)} src={cros_icon} alt="" />
@@ -27,7 +34,9 @@ const Login = ({ setShowLogin }) => {
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms and conditions</p>
         </div>
-        <button>{currState === "Sign Up" ? "Create Account" : "Login"}</button>
+        <button type="submit">
+          {currState === "Sign Up" ? "Create Account" : "Login"}
+        </button>
         {currState === "Login" ? (
           <p>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click here</span></p>
         ) : (
@@ -38,4 +47,4 @@ const Login = ({ setShowLogin }) => {
   );
 };
 
-export default Login;
+export default CLogin;

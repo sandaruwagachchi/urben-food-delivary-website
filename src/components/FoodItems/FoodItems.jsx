@@ -5,7 +5,7 @@ import white_add_icon from '../../assets/add_icon_white.png'
 import red_remove_icon from '../../assets/remove_icon_red.png'
 import green_add_icon from '../../assets/add_icon_green.png'
 
-const FoodItems = ({id,name,price,description,image}) => {
+const FoodItems = ({id,name,price,description,image,quantity}) => {
 
 const [itemCount, setItemCount] =useState(0);
 
@@ -28,6 +28,8 @@ const [itemCount, setItemCount] =useState(0);
       </div>
       <p className='food-item-desc'>{description}</p>
       <p className='food-item-price'>Rs: {price}</p>
+      <p className='food-item-quantity'>quantity: {quantity}</p>
+
     </div>
    </div>
   )

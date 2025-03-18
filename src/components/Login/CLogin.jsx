@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css';
 import cros_icon from '../../assets/cros_icon.png';
+import { useNavigate } from 'react-router';
 
 const CLogin = ({ setShowLogin }) => {
+  const navigate = useNavigate();
   const [currState, setCurrState] = useState("Login");
 
   return (
@@ -27,7 +29,8 @@ const CLogin = ({ setShowLogin }) => {
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms and conditions</p>
         </div>
-        <button>{currState === "Sign Up" ? "Create Account" : "Login"}</button>
+        <button onClick={(e) => {e.preventDefault(); navigate('/supplier'); 
+}}>{currState === "Sign Up" ? "Create Account" : "Login"}</button>
         {currState === "Login" ? (
           <p>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click here</span></p>
         ) : (

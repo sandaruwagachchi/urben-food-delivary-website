@@ -45,49 +45,55 @@ export const food_list=[
        _id:"1" ,
        name:"Papol",
        image:food_1,
-       price:12,
+       price:120,
        description:"Papolllllllllllll",
-       category:"Fruits"
+       category:"Fruits",
+       quantity:20
     },
     {
         _id:"2" ,
         name:"Brinjal",
         image:food_2,
-        price:18,
+        price:180,
         description:"Brinjalllllllllllll",
-        category:"Vegetables"
+        category:"Vegetables",
+        quantity:20
      },
      {
         _id:"3" ,
         name:"Cake",
         image:food_3,
-        price:20,
+        price:500,
         description:"Buter cake",
-        category:"Baked Goods"
+        category:"Baked Goods", 
+        quantity:20
      },
      {
         _id:"4" ,
         name:"Bigoniya",
         image:food_4,
-        price:12,
+        price:1200,
         description:"Banananananananana",
-        category:"Indoor Plants"
+        category:"Indoor Plants",
+        quantity:10
      },
      {
         _id:"5" ,
         name:"bag",
         image:food_5,
-        price:10,
+        price:250,
         description:"redi Bag",
-        category:"Handmade Craft"
+        category:"Handmade Craft",
+        quantity:14
      },
      {
         _id:"6" ,
         name:"Malupan",
         image:food_6,
-        price:12,
+        price:80,
         description:"Banananananananana",
-        category:"Baked Goods"
+        category:"Baked Goods",
+        quantity:20
      }
      
 ]

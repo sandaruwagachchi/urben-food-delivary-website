@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './FoodDisplay.css'
-import { StoreContext } from '../Context/StoreContect'
+import { StoreContext } from '../Context/StoreContext'
 import FoodItems from '../FoodItems/FoodItems'
 
 const FoodDisplay = ({ category }) => { // Destructuring props
@@ -21,6 +21,7 @@ const FoodDisplay = ({ category }) => { // Destructuring props
                     description={item.description}
                     price={item.price} 
                     image={item.image} 
+                    quantity={item.quantity} 
                   />
                 )
               }
