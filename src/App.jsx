@@ -1,35 +1,39 @@
-import React, { useState } from 'react'
-import Navbar from './components/Navbar/Navbar'
-import { Routes } from 'react-router'
-import { Route } from 'react-router'
-import Home from './Pages/Home/Home.jsx'
-import Cart from './Pages/Cart/Cart.jsx'
-import PlaceOrder from './Pages/PlaceOrder/PlaceOrder.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import Login from './components/Login/Login.jsx'
-import Supplier from './Pages/Supplier/Supplier.jsx'
-
+import React, { useState } from "react";
+import { Routes, Route, useLocation } from "react-router";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./Pages/Home/Home.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
+import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Login from "./components/Login/Login.jsx";
+import Supplier from "./Pages/Supplier/Supplier.jsx";
+import Welcome from "./Pages/Welcome/Welcome.jsx";
 
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
+  const location = useLocation();
 
-const [showLogin, setShowLogin] = useState(false)
+  const hideNavbarFooter = location.pathname === "/" || location.pathname === "/supplier";
 
   return (
     <>
-    {showLogin ? <Login setShowLogin={setShowLogin}/> : <></>}
-    <div className='app'>
-      <Navbar setShowLogin={setShowLogin}/>
-      <Routes>
-         <Route path ='/' element={<Home/>} />
-         <Route path ='/cart' element={<Cart/>} />
-         <Route path ='/order' element={<PlaceOrder/>} />
-         <Route path ='/supplier' element={<Supplier/>} />
+      {showLogin && <Login setShowLogin={setShowLogin} />}
+      
+      {!hideNavbarFooter && <Navbar setShowLogin={setShowLogin} />}
+      
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
+          <Route path="/supplier" element={<Supplier />} />
+        </Routes>
+      </div>
 
-      </Routes>
-    </div>
-    <Footer/>
+      {!hideNavbarFooter && <Footer />}
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -29,8 +29,9 @@ const CLogin = ({ setShowLogin }) => {
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms and conditions</p>
         </div>
-        <button onClick={(e) => {e.preventDefault(); navigate('/supplier'); 
-}}>{currState === "Sign Up" ? "Create Account" : "Login"}</button>
+        <button onClick={(e) => { e.preventDefault(); navigate('/supplier'); }}>
+          {currState === "Sign Up" ? "Create Account" : "Login"}
+        </button>
         {currState === "Login" ? (
           <p>Create a new account? <span onClick={() => setCurrState("Sign Up")}>Click here</span></p>
         ) : (

@@ -1,0 +1,80 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.welcome-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/header.png');
+  background-size: cover;
+  background-position: center center;
+  filter: blur(10px); /* Apply blur effect */
+  z-index: -1; /* Ensures the image stays behind the content */
+}
+  .welcome-container h1 {
+    font-size: 100px;
+    color: #4CAF50; 
+    margin-bottom: 20px;
+  }
+ 
+  .welcome-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    width: 60%;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 20px;
+  }
+
+  .button-group button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .button-group button:hover {
+    background-color: #45a049;
+  }
+  @media (max-width: 600px) {
+    .welcome-container h1 {
+      font-size: 2.5rem;
+    }
+    
+    .welcome-container p {
+      font-size: 1rem;
+      width: 80%;
+    }
+    
+    .button-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .button-group button {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+  

@@ -3,13 +3,13 @@ import './Login.css';
 import cros_icon from '../../assets/cros_icon.png';
 import { useNavigate } from 'react-router';
 
-const CLogin = ({ setShowLogin }) => {
+const Login = ({ setShowLogin }) => { 
   const navigate = useNavigate();
   const [currState, setCurrState] = useState("Login");
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
-    navigate('/supplier'); 
+    navigate('/home'); 
   };
 
   return (
@@ -47,4 +47,4 @@ const CLogin = ({ setShowLogin }) => {
   );
 };
 
-export default CLogin;
+export default Login;
