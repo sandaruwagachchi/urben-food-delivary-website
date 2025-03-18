@@ -13,7 +13,7 @@ const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const location = useLocation();
 
-  const hideNavbarFooter = location.pathname === "/" || location.pathname === "/supplier";
+  const hideNavbarFooter = location.pathname === "/" || location.pathname.startsWith("/supplier");
 
   return (
     <>
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
-          <Route path="/supplier" element={<Supplier />} />
+          <Route path="/supplier/*" element={<Supplier />} />
         </Routes>
       </div>
 
