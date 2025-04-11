@@ -9,7 +9,11 @@
 }
 .cart-items-item{
     margin: 10px 0px;
+    color: black;
     
+}
+.cart-items-item img{
+    width: 50px;
 }
 .cart-bottom{
     margin-top:80px;

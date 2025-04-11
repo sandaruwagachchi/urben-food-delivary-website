@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from '../../assets/logo.png'
 import search from '../../assets/search icon.png'
 import cart from '../../assets/cart icon.png'
+import profile from '../../assets/profile_logo.webp'
 import './Navbar.css'
 import { Link } from 'react-router'
 
@@ -24,6 +25,9 @@ const Navbar = ({}) => {
           <div className="cart-icon">
             <Link to='/cart'> <img src={cart} alt="" /></Link>
             <div className="dot"></div>
+          </div>
+          <div className="cart-icon">
+            <Link to='/profile'> <img src={profile} alt="" /></Link>
           </div>
       </div>
     </div>
