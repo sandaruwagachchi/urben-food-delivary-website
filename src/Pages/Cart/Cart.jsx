@@ -9,7 +9,7 @@ const Cart = () => {
 
   const deliveryFee = 300;
 
-  // Subtotal Calculation
+  // Subtotal
   const subtotal = food_list?.reduce((acc, item) => {
     if (cartItems?.[item._id]) {
       return acc + item.price * cartItems[item._id];
@@ -18,6 +18,37 @@ const Cart = () => {
   }, 0);
 
   const total = subtotal + deliveryFee;
+
+  // Checkout
+  const handleCheckout = async () => {
+    const orderData = {
+      orderDate: new Date().toISOString(),
+      totalPrice: total.toFixed(2),
+      customerID: 1 
+    };
+
+    try {
+      const response = await fetch('http://localhost:8081/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(orderData)
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Order created:', result);
+        navigate('/order', {
+          state: { orderID: result.orderID,subtotal, deliveryFee, total }  // Pass subtotal and deliveryFee along with total
+        });
+      } else {
+        console.error('Order creation failed');
+      }
+    } catch (error) {
+      console.error('Error creating order:', error);
+    }
+  };
 
   return (
     <div>
@@ -66,8 +97,8 @@ const Cart = () => {
             <b>Total</b>
             <b>Rs.{total}</b>
           </div>
-          <button className="checkout" onClick={() => navigate('/order')}>
-            CHECKOUT
+          <button className="checkout" onClick={handleCheckout}>
+            ORDER
           </button>
         </div>
       </div>
