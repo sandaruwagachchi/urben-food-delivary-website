@@ -6,6 +6,7 @@
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
     align-items: center;
     font-size: max(1vw,12px);
+    font-weight: bold;
 }
 .cart-items-item{
     margin: 10px 0px;
@@ -50,5 +51,22 @@
 
 .checkout:hover {
     background-color: #219150;
+    transform: scale(1.1);
+}
+.remove-btn{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: green;
+    text-align: center;
+    border-radius: 30px;
+    width: 60px;
+    height: 25px;
+    padding-top: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+.remove-btn:hover{
+    background-color: red;
     transform: scale(1.1);
 }

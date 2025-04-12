@@ -8,7 +8,6 @@ import Footer from "./components/Footer/Footer.jsx";
 import Login from "./components/Login/Login.jsx";
 import Supplier from "./Pages/Supplier/Supplier.jsx";
 import Welcome from "./Pages/Welcome/Welcome.jsx";
-import Profile from "./Pages/Profile/Profile.jsx";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -28,7 +27,6 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/supplier/*" element={<Supplier />} />
         </Routes>
       </div>
