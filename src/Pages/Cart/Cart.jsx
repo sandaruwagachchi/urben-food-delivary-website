@@ -40,7 +40,7 @@ const Cart = () => {
         const result = await response.json();
         console.log('Order created:', result);
         navigate('/order', {
-          state: { orderID: result.orderID,subtotal, deliveryFee, total }  // Pass subtotal and deliveryFee along with total
+          state: { orderID: result.orderID, subtotal, deliveryFee, total }  // Pass subtotal and deliveryFee along with total
         });
       } else {
         console.error('Order creation failed');

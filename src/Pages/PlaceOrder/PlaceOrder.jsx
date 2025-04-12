@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './PlaceOrder.css';
-import { useLocation } from 'react-router';
+import { useLocation,useNavigate } from 'react-router';
 
 const PlaceOrder = () => {
+
+  const navigate = useNavigate();
+
   const { state } = useLocation();
   // Expecting orderID from state along with subtotal, deliveryFee, total
   const { orderID, subtotal, deliveryFee, total } = state || {};
@@ -66,6 +69,27 @@ const PlaceOrder = () => {
       setError("Network error. Try again later.");
     }
   };
+
+  const handleCancelOrder = async () => {
+    try {
+      const response = await fetch(`http://localhost:8081/api/orders/${orderID}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        alert('Order cancelled successfully.');
+        navigate('/home', { state: { refresh: true }  });
+      } else {
+        const errorMsg = await response.text();
+        console.error("Server Error:", errorMsg);
+        setError("Failed to cancel the order. Please try again later.");
+      }
+    } catch (err) {
+      console.error("Network Error:", err);
+      setError("Network error. Please try again later.");
+    }
+  };
+  
 
   return (
     <form className="place-order" onSubmit={handleSubmit}>
@@ -150,7 +174,7 @@ const PlaceOrder = () => {
             </div>
           </div>
         </div>
-        <button className="cancel-Order">
+        <button className="cancel-Order" onClick={handleCancelOrder}>
           Cancel Order
         </button>
       </div>
